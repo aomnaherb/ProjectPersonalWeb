@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap - Prebuilt Layout</title>
+
+    <!-- Bootstrap -->
+    <link href="css/bootstrap-4.4.1.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet" type="text/css">
+    <link href="css/styleBG.css" rel="stylesheet" type="text/css">
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light"><a class="navbar-brand" href="index.html"> AOMSITE</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent1" aria-controls="navbarSupportedContent1" aria-expanded="false" aria-label="Toggle navigation"> <span class="navbar-toggler-icon"> </span></button>
+  <div class="collapse navbar-collapse" id="navbarSupportedContent1">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item "> <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a></li>
+      <li class="nav-item active"> <a class="nav-link" href="Slide.html">SlideImage</a></li>
+      <li class="nav-item "><span class="nav-item"> <a class="nav-link" href="aboutMe.html">Aboutme</a></span></li>
+    </ul>
+    <form class="form-inline my-2 my-lg-0">
+    </form>
+  </div>
+</nav>
+  <div class="jumbotron jumbotron-fluid text-center">
+    <h1 class="display-4">My Gallery</h1>
+    <div class="container">
+      <div class="mySlides">
+<div class="numbertext">1 / 6</div>
+        <img src="images/72935694_p0_master1200.jpg" style="width:100%">
+      </div>
+    
+      <div class="mySlides">
+        <div class="numbertext">2 / 6</div>
+        <img src="images/72982703_p0_master1200.jpg" style="width:100%">
+      </div>
+    
+      <div class="mySlides">
+        <div class="numbertext">3 / 6</div>
+        <img src="images/73984668_p0_master1200.jpg" style="width:100%">
+      </div>
+        
+      <div class="mySlides">
+        <div class="numbertext">4 / 6</div>
+        <img src="images/76578292_p0_master1200.jpg" style="width:100%">
+      </div>
+    
+      <div class="mySlides">
+        <div class="numbertext">5 / 6</div>
+        <img src="images/74139820_p0_master1200.jpg" style="width:100%">
+      </div>
+        
+      <div class="mySlides">
+        <div class="numbertext">6 / 6</div>
+        <img src="images/76557448_p0_master1200.jpg" style="width:100%">
+      </div>
+        
+      <a class="prev" style="
+    left: 40px;
+" onclick="plusSlides(-1)" >❮</a>
+		
+		
+      <a class="next"  style="
+    right: 50px;" onclick="plusSlides(1)">❯</a>
+    
+      <div class="caption-container">
+        <p id="caption"></p>
+      </div>
+    
+      <div class="row">
+        <div class="column">
+          <img class="demo cursor" src="images/72935694_p0_master1200.jpg" style="width:100%" onclick="currentSlide(1)" alt="Goblin Slayer">
+        </div>
+        <div class="column">
+          <img class="demo cursor" src="images/72982703_p0_master1200.jpg" style="width:100%" onclick="currentSlide(2)" alt="SpiderGwen">
+        </div>
+        <div class="column">
+          <img class="demo cursor" src="images/73984668_p0_master1200.jpg" style="width:100%" onclick="currentSlide(3)" alt="Scáthach - San">
+        </div>
+        <div class="column">
+          <img class="demo cursor" src="images/76578292_p0_master1200.jpg" style="width:100%" onclick="currentSlide(4)" alt="APRON -San ">
+        </div>
+        <div class="column">
+          <img class="demo cursor" src="images/74139820_p0_master1200.jpg" style="width:100%" onclick="currentSlide(5)" alt="Sala - san">
+        </div>    
+        <div class="column">
+          <img class="demo cursor" src="images/76557448_p0_master1200.jpg" style="width:100%" onclick="currentSlide(6)" alt="Maya">
+        </div>
+      </div>
+    </div>
+	  <!-- Container for the image gallery -->
+</div>
+<div class="container bg-transparent ContentFooter">
+  <hr>
+<div class="row">
+      <div class="text-center col-lg-6 offset-lg-3">
+             <h4>Website create by </h4>
+             <p>Krungthai sumpurng&nbsp;</p>
+    </div>
+  </div>
+</div>
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) --> 
+  <script src="js/jquery-3.4.1.min.js"></script>
+
+    <!-- Include all compiled plugins (below), or include individual files as needed --> 
+    <script src="js/popper.min.js"></script>
+  <script src="js/bootstrap-4.4.1.js"></script>
+  <script>
+    var slideIndex = 1;
+    showSlides(slideIndex);
+    
+    function plusSlides(n) {
+      showSlides(slideIndex += n);
+    }
+    
+    function currentSlide(n) {
+      showSlides(slideIndex = n);
+    }
+    
+    function showSlides(n) {
+      var i;
+      var slides = document.getElementsByClassName("mySlides");
+      var dots = document.getElementsByClassName("demo");
+      var captionText = document.getElementById("caption");
+      if (n > slides.length) {slideIndex = 1}
+      if (n < 1) {slideIndex = slides.length}
+      for (i = 0; i < slides.length; i++) {
+          slides[i].style.display = "none";
+      }
+      for (i = 0; i < dots.length; i++) {
+          dots[i].className = dots[i].className.replace(" active", "");
+      }
+      slides[slideIndex-1].style.display = "block";
+      dots[slideIndex-1].className += " active";
+      captionText.innerHTML = dots[slideIndex-1].alt;
+    }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,40 @@
+@charset "UTF-8";
+
+body{
+    font-family: monospace;
+	color: #002A3A;
+}
+
+footer{
+    color: aliceblue;
+	font-size: 15px
+}
+
+aside{
+    font-size: larger;
+}
+footer{
+	text-align: center;
+}
+
+.poppular {
+	text-align: center;
+	font: italic;
+	font-size: 40px;	
+}
+.carousel-caption{
+	font: italic;
+	font-size: 50px;
+}
+.TextAside{
+	font: italic;
+	font-size: 20px;
+}
+.Mapping {
+	height: 500px;
+	width: 100%;
+}
+.Maps{
+	height: 500px;
+	width: 100%;
+}
